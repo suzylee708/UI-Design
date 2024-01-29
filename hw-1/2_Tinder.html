@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinder Information Display</title>
+    <style>
+      #card {
+        margin: 20px;
+        width: 500px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .tinder-title {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+      }
+
+      .profile-container {
+        width: 500px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        align-items: center;
+      }
+
+      .profile-image {
+        width: 500px;
+      }
+
+      .verified-icon {
+        width: 20px;
+      }
+
+      .name-text {
+        font-size: 25px;
+        margin-left: 20px;
+      }
+
+      .verified-text {
+        color: rgb(169, 169, 169);
+        font-size: 20px;
+        font-family: sans-serif;
+        margin-left: 20px;
+      }
+
+      .gray-text-box {
+        width: 300px;
+        display: block;
+        background-color: #9e9e9e;
+        border-radius: 30px;
+        text-align: center;
+        color: #f9f9f9;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: auto;
+        font-size: 22px;
+      }
+
+      .heart-icon {
+        width: 30px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card">
+      <img
+        class="tinder-title"
+        src="http://coms4170.cs.columbia.edu/2019-spring/assignments/hw2/tinder_images/tinder_logo.png"
+        alt="Tinder Logo"
+      />
+      <br />
+      <hr />
+      <div class="profile-container">
+        <img
+          class="profile-image"
+          src="http://coms4170.cs.columbia.edu/2019-spring/assignments/hw2/tinder_images/tinder_person.png"
+          alt="Profile Image"
+        />
+        <br />
+        <h2>
+          <span class="name-text">
+            Sean Rad, 29
+            <img
+              class="verified-icon"
+              src="http://coms4170.cs.columbia.edu/2019-spring/assignments/hw2/tinder_images/tinder_verified.png"
+              alt="Verified Icon"
+          /></span>
+        </h2>
+
+        <span class="verified-text"> Verified </span>
+        <br />
+      </div>
+
+      <span class="gray-text-box">
+        <img
+          class="heart-icon"
+          src="http://coms4170.cs.columbia.edu/2019-spring/assignments/hw2/tinder_images/heart.png"
+          alt="Heart Icon"
+        />
+        Like Me On Tinder
+      </span>
+    </div>
+  </body>
+</html>
