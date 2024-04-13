@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Columbia Paper Infinity</title>
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <!-- bootstrap same as before -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 30px;
+      }
+      #blue-box {
+        background-color: lightblue;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        overflow: hidden; /* To contain floated elements */
+      }
+      .header-font {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 20px;
+        display: block;
+      }
+      #droppable {
+        width: 90%;
+        height: 100px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px;
+        border: 1px solid black;
+      }
+      #draggable {
+        cursor: move;
+        background-color: transparent;
+      }
+      #draggable:hover {
+        background-color: lightyellow;
+      }
+      .column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .input-text {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      .button-submit {
+        background-color: blue;
+        color: white;
+        padding: 10px 15px 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .container {
+        padding: 15px;
+        margin: 0px;
+        /* max-width: 100%; */
+        width: 100%;
+      }
+      .sales-record {
+        margin-top: 20px;
+      }
+      .delete-button {
+        background-color: gold;
+        color: black;
+        border: none;
+        padding: 10px 15px 10px 15px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .error-message {
+        color: red;
+      }
+      .column-padding {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blue-box">
+      <div class="header-font">Columbia Paper Infinity</div>
+      <div id="droppable" class="ui-widget-header">
+        <p>trash</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <label for="paper-sales">Log Your Paper Sales:</label>
+        </div>
+        <div class="col-5">
+          <input
+            type="text"
+            id="client"
+            class="input-text"
+            placeholder="Client"
+          />
+          <div class="error-message" id="client-error"></div>
+        </div>
+        <div class="col-3">
+          <input
+            type="text"
+            id="reams"
+            class="input-text"
+            placeholder="# Reams"
+          />
+          <div class="error-message" id="reams-error"></div>
+        </div>
+        <div class="col-1">
+          <button class="button-submit" id="submit-sale">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container sales-record" id="sales-records">
+      <!-- Sales records will be dynamically added here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="./log_sales.js"></script>
+  </body>
+</html>
