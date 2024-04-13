@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+
+    <!-- bootstrap same as before -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    />
+
+    <style>
+      .header {
+        background-color: silver;
+        padding-top: 80px;
+        padding-bottom: 80;
+        padding-left: 30px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        color: black;
+        font-size: 40px;
+      }
+
+      .client-box {
+        display: inline-block;
+      }
+
+      .row {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      button {
+        position: relative;
+        top: -25%;
+      }
+
+      .warning {
+        color: hotpink;
+      }
+    </style>
+
+    <script src="./test.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 header">Columbia Paper Infinity</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">Log your paper sales:</div>
+
+        <div class="col-md-5">
+          <textarea
+            id="client-box"
+            rows="1"
+            cols="40"
+            placeholder="Client"
+          ></textarea>
+          <div id="client-warning"></div>
+        </div>
+
+        <div class="col-md-2">
+          <textarea
+            id="reams-box"
+            rows="1"
+            cols="10"
+            placeholder="# Reams"
+          ></textarea>
+          <div id="reams-warning"></div>
+        </div>
+
+        <div class="col-md-1">
+          <button class="btn btn-primary" id="submit-button">Submit</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" id="list"></div>
+      </div>
+    </div>
+  </body>
+</html>
